@@ -1,7 +1,7 @@
 const envalid = require('envalid');
 
 const env = envalid.cleanEnv(process.env, {
-  API_URL: envalid.url(),
+  API_URL: envalid.url({ default: 'http://localhost:3000' }),
 });
 
 // Filter env variables for Next.js config.
