@@ -1,14 +1,18 @@
 import { AppProps, AppInitialProps } from 'next/app';
 import Link from 'next/link';
-import { ComponentPropsWithoutRef, useRef } from 'react';
+import { ComponentPropsWithoutRef, forwardRef, Ref, useRef } from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
 import Pipe from '@/components/Pipe';
 import clsx from 'clsx';
 
-function NavAnchor(props: ComponentPropsWithoutRef<'a'>) {
-  return <a {...props} className={clsx(props.className, 'cursor-pointer hover:underline')} />;
+function NavAnchorWithoutRef(props: ComponentPropsWithoutRef<'a'>, ref?: Ref<HTMLAnchorElement>) {
+  return (
+    <a {...props} ref={ref} className={clsx(props.className, 'cursor-pointer hover:underline')} />
+  );
 }
+
+const NavAnchor = forwardRef(NavAnchorWithoutRef);
 
 function App({ Component, pageProps }: AppInitialProps & AppProps) {
   const queryClientRef = useRef<QueryClient | null>(null);
@@ -26,7 +30,7 @@ function App({ Component, pageProps }: AppInitialProps & AppProps) {
 
   return (
     <QueryClientProvider client={queryClientRef.current}>
-      <header className="bg-blue p-4 flex flex-wrap items-center justify-between">
+      <header className="flex flex-wrap items-center justify-between p-4 bg-blue">
         <Link href="/">
           <NavAnchor>My Restaurant</NavAnchor>
         </Link>
