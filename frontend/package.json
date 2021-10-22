@@ -8,8 +8,7 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production && next build",
     "build:styles": "tailwind build src/assets/css/tailwind.css -o public/css/styles.min.css",
-    "dev": "yarn run dev:server",
-    "dev:server": "npx next dev -p ${PORT:-3001}",
+    "dev": "npx next dev -p 3001",
     "prettier:check": "prettier --check '**/**/*.{json,md,yml,yaml,css,ts,tsx,js,jsx}'",
     "start": "cross-env NODE_ENV=production node server.js",
     "typecheck": "tsc --noEmit"

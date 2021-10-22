@@ -19,14 +19,20 @@ The main technologies used are: React (v17), Next.js (v10), Typescript (v4) and 
 
 ## Setup & Run
 
+### Backend
+
 1. Create and run database: `docker-compose up -d`
 2. Install backend dependencies: `(cd backend && yarn install)`
-3. Install frontend dependencies: `(cd frontend && yarn install)`
-4. Migrate database schema: `(cd backend && yarn run migration:up)`
-5. Seed database with data: `(cd backend && yarn run seeds:up)`
-6. Start backend server: `(cd backend && yarn run dev)`
-7. Build frontend styles: `(cd frontend && yarn run build:styles)`
-8. Start frontend server: `(cd frontend && yarn run dev)`
+3. Migrate database schema: `(cd backend && yarn run migration:up)`
+4. Seed database with data: `(cd backend && yarn run seeds:up)`
+5. Start backend server: `(cd backend && yarn run dev)`
+
+### Frontend
+
+1. Install frontend dependencies: `(cd frontend && yarn install)`
+2. Build frontend styles: `(cd frontend && yarn run build:styles)`
+3. Start frontend server: `(cd frontend && yarn run dev)`
+
 
 ## Ports
 
