@@ -35,7 +35,6 @@ The main technologies used are: React (v17), Next.js (v10), Typescript (v4) and 
 ### Frontend
 
 1. Install frontend dependencies: `(cd frontend && yarn install)`
-2. Build frontend styles: `(cd frontend && yarn run build:styles)`
 3. Start frontend server: `(cd frontend && yarn run dev)`
 
 
@@ -47,3 +46,6 @@ The main technologies used are: React (v17), Next.js (v10), Typescript (v4) and 
 5432 Postgres
 ```
 
+## API Specs
+
+API specs with swagger are in ```localhost:3000/api```
