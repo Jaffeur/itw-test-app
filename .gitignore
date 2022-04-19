@@ -121,4 +121,4 @@ dist
 
 
 # Migration files
-src/database/migrations/*
+*/src/database/migrations/*
